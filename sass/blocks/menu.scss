@@ -1,0 +1,45 @@
+$text-color: #707070;
+
+.menu {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    
+    &__element {
+        margin-right: 35px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 12px;
+        font-family: Raleway;
+        line-height: 1.667;
+        display: inline-block;
+        color: $text-color;
+        transition-duration: 500ms;
+        transition-property: color;
+
+        &::before {
+            content: "";
+            width: 8px;
+            height: 2px;
+            background-color: $second;
+            display: block;
+            margin-bottom: 2px;
+            opacity: 0;
+            transition-duration: 500ms;
+            transition-property: opacity;
+        }
+
+        &:hover {
+            color: $second;
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
