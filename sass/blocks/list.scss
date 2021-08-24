@@ -1,0 +1,26 @@
+$list-color: #959595;
+
+.list {
+    font-size: 14px;
+    line-height: 1.286;
+    color: $list-color;
+    list-style: none;
+    padding: 0;
+
+    &__element {
+        margin: 15px 0;
+        padding-left: 55px;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-color: $second;
+            width: 8px;
+            height: 2px;
+            position: absolute;
+            left: 23px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
