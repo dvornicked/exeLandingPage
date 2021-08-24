@@ -5,9 +5,6 @@ $text-color: #555555;
 
 .advantages {
 
-    padding-top: 65px;
-    padding-bottom: 50px;
-
     &__title {
         @include visually-hidden;
     }
@@ -16,6 +13,8 @@ $text-color: #555555;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(210px, auto));
         grid-column-gap: 30px;
+        padding-top: 65px;
+        padding-bottom: 50px;
     }
 
     &__item {
@@ -85,6 +84,21 @@ $text-color: #555555;
             content: "";
             display: block;
             margin-top: 25px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages {
+        &__list {
+            padding-top: 30px;
+            padding-bottom: 25px;
+        }
+        &__item {
+            text-align: center;
+        }
+        &__img {
+            margin: 0 auto;
         }
     }
 }
