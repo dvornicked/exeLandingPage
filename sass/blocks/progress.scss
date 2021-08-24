@@ -1,0 +1,48 @@
+.progress {
+    &__name {
+        font-size: 14px;
+        font-family: Raleway;
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.429;
+        margin: 10px 0;
+    }
+
+    &__element {
+        border: 1px solid rgba(255, 255, 255, .25);
+        border-radius: 3px;
+        padding: 2px;
+    }
+    
+    &__line {
+        background-color: $white;
+        width: 0;
+        height: 4px;
+        position: relative;
+    }
+
+    &__tooltip {
+        background-color: $primary;
+        position: absolute;
+        width: 31px;
+        top: -32px;
+        right: -15px;
+        font-size: 11px;
+        color: $white;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+        border-radius: 3px;
+
+        &::before {
+            content: "";
+            border: 4px solid transparent;
+            border-top: 4px solid $primary;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
