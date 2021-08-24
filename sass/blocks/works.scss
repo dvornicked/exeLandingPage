@@ -1,0 +1,194 @@
+$bg: #202020;
+$line-color: #2f2f2f;
+$works-text: #464646;
+$desc-color: #959595;
+
+.works {
+    background: $bg;
+
+    &__title-hide {
+        @include visually-hidden;
+    }
+
+    &__list {
+        padding-top: 80px;
+        padding-bottom: 160px;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(60px, auto));
+        grid-auto-rows: minmax(270px, auto);
+    }
+
+    &__element {
+        position: relative;
+
+        &:first-child {
+            max-width: 270px;
+            &::before {
+                display: none;
+            }
+        }
+        &_three {
+            grid-column: span 3;
+        }
+        &_four {
+            grid-column: span 4;
+        }
+        &_five {
+            grid-column: span 5;
+        }
+        &_six {
+            grid-column: span 6;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgba(17, 17, 17, .85);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+
+        &:hover {
+            &::before {
+                z-index: 1;
+                opacity: 1;
+            }
+            .works__info {
+                opacity: 1;
+                border-color: $second;
+                z-index: 2;
+            }
+        }
+
+        &:nth-of-type(2) {
+            background: url('../../img/img1.jpg') center no-repeat;
+            background-size: cover;
+        }
+        &:nth-of-type(3) {
+            background: url('../../img/img2.jpg') center no-repeat;
+            background-size: cover;
+        }
+        &:nth-of-type(4) {
+            background: url('../../img/img3.jpg') center no-repeat;
+            background-size: cover;
+        }
+        &:nth-of-type(5) {
+            background: url('../../img/img4.jpg') center no-repeat;
+            background-size: cover;
+        }
+        &:nth-of-type(6) {
+            background: url('../../img/img5.jpg') center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        font-family: Raleway;
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.1;
+        position: relative;
+
+        &::before {
+            background-color: $line-color;
+            position: absolute;
+            width: 70px;
+            height: 2px;
+            left: 0;
+            top: -25px;
+            content: "";
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        color: $works-text;
+        line-height: 1.429;
+        margin: 20px 0;
+    }
+
+    &__info {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border: 5px solid transparent;
+        box-sizing: border-box;
+        padding: 10px 25px 80px;
+        z-index: -1;
+        opacity: 0;
+        transition-duration: 500ms;
+        transition-property: opacity, border-color;
+    }
+
+    &__name {
+        font-size: 24px;
+        font-family: Raleway;
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 20px 0;
+        line-height: 1.1;
+    }
+
+    &__desc {
+        font-size: 12px;
+        color: $desc-color;
+        text-transform: uppercase;
+        line-height: 1.667;
+        margin: 20px 0;
+
+        &::after {
+            content: "";
+            background-color: $second;
+            width: 70px;
+            height: 2px;
+            display: block;
+            margin-top: 25px;
+        }
+    }
+
+    &__zoom, &__link {
+        border-radius: 50%;
+        background-color: $primary;
+        position: relative;
+        cursor: pointer;
+        width: 42px;
+        height: 42px;
+        margin: 0 2px;
+        appearance: none;
+        padding: 0;
+        border: none;
+        transition-duration: 500ms;
+        transition-property: background-color;
+
+        &:hover {
+            background-color: $second;
+        }
+
+        svg {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            fill: $white;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+}
