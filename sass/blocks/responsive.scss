@@ -49,3 +49,24 @@ $text-color: #464646;
         };
     }
 }
+
+@media (max-width: 768px) {
+    .responsive {
+        &__wrap {
+            background: none;
+        }
+        &__info {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive {
+        &__wrap {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+}
