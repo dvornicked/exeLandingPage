@@ -6,7 +6,8 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 55px 0;
+        padding-top: 55px;
+        padding-bottom: 55px;
     }
 
     &__logo {
@@ -16,5 +17,21 @@
     &__menu {
         padding: 0;
         margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__wrap {
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        &__logo {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
 }

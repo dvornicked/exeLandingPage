@@ -43,3 +43,11 @@ $text-color: #707070;
         }
     }
 }
+
+@media (max-width: 768px) {
+    .menu {
+        &__element {
+            margin-right: 20px;
+        }
+    }
+}
