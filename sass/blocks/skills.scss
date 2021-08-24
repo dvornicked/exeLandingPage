@@ -52,3 +52,33 @@
         margin: 20px 0;
     }
 }
+
+@media (max-width: 980px) {
+    .skills {
+        &__left {
+            margin-right: 30px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        &__wrap {
+            flex-direction: column;
+        }
+        &__left {
+            margin-right: 0;
+            margin-bottom: 25px;
+            flex-basis: auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .skills {
+        &__wrap {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+}
