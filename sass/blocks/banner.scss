@@ -1,0 +1,59 @@
+$text-color: #555;
+
+.banner {
+    background: url('../../img/bg-man.jpg') center top no-repeat;
+    background-size: cover;
+
+    &__wrap {
+        padding-top: 255px;
+        padding-bottom: 250px;
+    }
+
+    &__info {
+        max-width: 580px;
+        margin-left: auto;
+    }
+
+    &__title {
+        font-size: 80px;
+        font-family: Raleway;
+        color: $white;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+    }
+
+    &__little {
+        font-size: 43px;
+        display: block;
+    }
+
+    &__red {
+        color: $second;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-family: Raleway;
+        color: $text-color;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1.333;
+        margin: 15px 0;
+    }
+
+    &__button {
+        @include button() {
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        };
+
+        &_last {
+            margin-left: 25px;
+            border-color: $white;
+            background-color: transparent;
+        }
+    }
+}
