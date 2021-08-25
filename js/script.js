@@ -25,4 +25,15 @@ $(document).ready(function() {
             animate = false;
         }
     });
+
+    $('.carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        items: 4,
+        dots: false,
+        navText: [],
+        responsive: {
+        }
+    });
 });
