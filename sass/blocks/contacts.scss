@@ -42,3 +42,28 @@
         max-width: 570px;
     }
 }
+
+@media (max-width:980px) {
+    .contacts {
+        &__list {
+            flex-direction: column;
+        }
+        &__form {
+            margin-right: 0;
+            flex-basis: auto;
+            margin-bottom: 35px;
+        }
+        &__map {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width:980px) {
+    .contacts {
+        &__wrap {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}
