@@ -175,3 +175,48 @@ $desc-color: #959595;
         transition-property: border-color;
     }
 }
+
+@media (max-width: 980px) {
+    .blog {
+        &__element {
+            &:nth-of-type(1), &:nth-of-type(2) {
+                .blog__topic {
+                    font-size: 20px;
+                }
+            }
+        }
+        .blog__topic {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blog {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+        }
+
+        &__element {
+            grid-column: span 1;
+            grid-row: span 1 !important;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .blog {
+        &__list {
+            grid-template-columns: minmax(290px, auto);
+            padding-top: 50px;
+            padding-bottom: 75px;
+        }
+
+        &__element {
+            &:nth-of-type(2) {
+                order: -1;
+            }
+        }
+    }
+}
