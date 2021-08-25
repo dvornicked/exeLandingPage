@@ -34,6 +34,18 @@ $(document).ready(function() {
         dots: false,
         navText: [],
         responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            980: {
+                item: 4 
+            }
         }
     });
 });

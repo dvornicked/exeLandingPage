@@ -47,3 +47,19 @@ $text-color: #464646;
     }
 }
 
+@media (max-width: 980px) {
+    .clients {
+        &__carousel {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .clients {
+        &__wrap {
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+    }
+}
