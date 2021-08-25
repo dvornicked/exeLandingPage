@@ -1,0 +1,59 @@
+$input-color: #202020;
+
+.form {
+    label {
+        @include visually-hidden;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+        input, textarea {
+            width: 100%;
+            border-radius: 10px;
+            background-color: $input-color;
+            height: 60px;
+            display: block;
+            border: none;
+            box-shadow: none;
+            resize: none;
+            font-size: 20px;
+            font-family: Raleway;
+            color: $white;
+            line-height: 1.4;
+            padding: 16px 10px 16px 30px;
+            box-sizing: border-box;
+
+            &::placeholder {
+                color: $white;
+                opacity: 1;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            min-height: 200px;
+        }
+    }
+
+    &__button {
+        border-radius: 10px;
+        width: 100%;
+        background: $second;
+        border: none;
+        box-shadow: none;
+        appearance: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: Raleway;
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 16px 0;
+
+        &:hover {
+            background-color: darken($second, 5%);
+        }
+    }
+}
